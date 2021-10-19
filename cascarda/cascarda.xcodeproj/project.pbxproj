@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F45DD1F2271D576E0082DFB3 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DD1F1271D576E0082DFB3 /* StartupViewController.swift */; };
 		F45DD1F5271D600F0082DFB3 /* MainMenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DD1F4271D600E0082DFB3 /* MainMenueViewController.swift */; };
 		F45DD1FB271DB3B80082DFB3 /* FindCoplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DD1FA271DB3B80082DFB3 /* FindCoplayerViewController.swift */; };
 		F4758610271D50AE0071C141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475860F271D50AE0071C141 /* AppDelegate.swift */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F45DD1F1271D576E0082DFB3 /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
 		F45DD1F4271D600E0082DFB3 /* MainMenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenueViewController.swift; sourceTree = "<group>"; };
 		F45DD1FA271DB3B80082DFB3 /* FindCoplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCoplayerViewController.swift; sourceTree = "<group>"; };
 		F475860C271D50AE0071C141 /* cascarda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cascarda.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,14 +45,6 @@
 				F45DD1F4271D600E0082DFB3 /* MainMenueViewController.swift */,
 			);
 			path = MainMenue;
-			sourceTree = "<group>";
-		};
-		F45DD1F6271D619F0082DFB3 /* Startup */ = {
-			isa = PBXGroup;
-			children = (
-				F45DD1F1271D576E0082DFB3 /* StartupViewController.swift */,
-			);
-			path = Startup;
 			sourceTree = "<group>";
 		};
 		F45DD1F9271D62EF0082DFB3 /* CustomControls */ = {
@@ -96,7 +86,6 @@
 				F4B62F0B271EC5A900681063 /* Arrows.swift */,
 				F45DD1FC271DB3BD0082DFB3 /* FindCoplayer */,
 				F45DD1F3271D577D0082DFB3 /* MainMenue */,
-				F45DD1F6271D619F0082DFB3 /* Startup */,
 				F45DD1F9271D62EF0082DFB3 /* CustomControls */,
 				F4758618271D50B20071C141 /* Assets.xcassets */,
 				F475861A271D50B20071C141 /* LaunchScreen.storyboard */,
@@ -174,7 +163,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F45DD1F2271D576E0082DFB3 /* StartupViewController.swift in Sources */,
 				F4758610271D50AE0071C141 /* AppDelegate.swift in Sources */,
 				F45DD1FB271DB3B80082DFB3 /* FindCoplayerViewController.swift in Sources */,
 				F4B62F0C271EC5A900681063 /* Arrows.swift in Sources */,

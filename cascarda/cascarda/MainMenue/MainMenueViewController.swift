@@ -9,9 +9,10 @@ import UIKit
 
 class MainMenueViewController: UIViewController {
     
-    private let startButtonColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+    //private let startButtonColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+    private let startButtonColor = #colorLiteral(red: 0.07408587842, green: 0.9852093003, blue: 1, alpha: 1)
     
-    private var arrrayOfColors = [#colorLiteral(red: 0.953619722, green: 0.9103077525, blue: 1, alpha: 1), #colorLiteral(red: 0.742261254, green: 0.8079684041, blue: 1, alpha: 1)]
+    private var arrrayOfColors = [#colorLiteral(red: 0.557222512, green: 0.8085616312, blue: 1, alpha: 1), #colorLiteral(red: 0.742261254, green: 0.8079684041, blue: 1, alpha: 1)]
     private var backgroundColorsLoop = 0
     private var backgroundColorsLoopIsOn = true
     
@@ -25,6 +26,8 @@ class MainMenueViewController: UIViewController {
         button.titleLabel?.font = .boldSystemFont(ofSize: 45)
         button.backgroundColor = startButtonColor
         button.layer.cornerRadius = 50
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.white.cgColor
         return button
     }()
     
@@ -78,7 +81,7 @@ class MainMenueViewController: UIViewController {
         UIView.animate(withDuration: 1) {
             self.startGameButton.center.y = -300
         } completion: { _ in
-            UIView.animate(withDuration: 1, delay: 0, options: UIView.AnimationOptions.allowUserInteraction) {
+            UIView.animate(withDuration: 0.5, delay: 0, options: UIView.AnimationOptions.allowUserInteraction) {
                 self.view.backgroundColor = .white
             } completion: { isFinished in
                 if isFinished {
@@ -93,16 +96,10 @@ class MainMenueViewController: UIViewController {
     // MARK: - Button settings
     
     private func setupStartButtonTap() {
-        startGameButton.addTarget(self, action: #selector(startTap), for: .touchDown)
-        startGameButton.addTarget(self, action: #selector(endTap), for: .touchUpInside)
+        startGameButton.addTarget(self, action: #selector(startTap), for: .touchUpInside)
     }
     
     @objc func startTap() {
-        self.startGameButton.backgroundColor = .red
-    }
-    
-    @objc func endTap() {
-        self.startGameButton.backgroundColor = startButtonColor
         removeAnimateBackgroundColor()
         moveButtonUp()
     }
