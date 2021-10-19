@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F45DD1F2271D576E0082DFB3 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DD1F1271D576E0082DFB3 /* StartupViewController.swift */; };
+		F45DD1F5271D600F0082DFB3 /* MainMenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DD1F4271D600E0082DFB3 /* MainMenueViewController.swift */; };
+		F45DD1FB271DB3B80082DFB3 /* FindCoplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DD1FA271DB3B80082DFB3 /* FindCoplayerViewController.swift */; };
 		F4758610271D50AE0071C141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475860F271D50AE0071C141 /* AppDelegate.swift */; };
 		F4758612271D50AE0071C141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4758611271D50AE0071C141 /* SceneDelegate.swift */; };
-		F4758614271D50AE0071C141 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4758613271D50AE0071C141 /* ViewController.swift */; };
-		F4758617271D50AE0071C141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4758615271D50AE0071C141 /* Main.storyboard */; };
 		F4758619271D50B20071C141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4758618271D50B20071C141 /* Assets.xcassets */; };
 		F475861C271D50B20071C141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F475861A271D50B20071C141 /* LaunchScreen.storyboard */; };
+		F4B62F0C271EC5A900681063 /* Arrows.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B62F0B271EC5A900681063 /* Arrows.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F45DD1F1271D576E0082DFB3 /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
+		F45DD1F4271D600E0082DFB3 /* MainMenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenueViewController.swift; sourceTree = "<group>"; };
+		F45DD1FA271DB3B80082DFB3 /* FindCoplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCoplayerViewController.swift; sourceTree = "<group>"; };
 		F475860C271D50AE0071C141 /* cascarda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cascarda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F475860F271D50AE0071C141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4758611271D50AE0071C141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F4758613271D50AE0071C141 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F4758616271D50AE0071C141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4758618271D50B20071C141 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F475861B271D50B20071C141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F475861D271D50B20071C141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4B62F0B271EC5A900681063 /* Arrows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrows.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F45DD1F3271D577D0082DFB3 /* MainMenue */ = {
+			isa = PBXGroup;
+			children = (
+				F45DD1F4271D600E0082DFB3 /* MainMenueViewController.swift */,
+			);
+			path = MainMenue;
+			sourceTree = "<group>";
+		};
+		F45DD1F6271D619F0082DFB3 /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				F45DD1F1271D576E0082DFB3 /* StartupViewController.swift */,
+			);
+			path = Startup;
+			sourceTree = "<group>";
+		};
+		F45DD1F9271D62EF0082DFB3 /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		F45DD1FC271DB3BD0082DFB3 /* FindCoplayer */ = {
+			isa = PBXGroup;
+			children = (
+				F45DD1FA271DB3B80082DFB3 /* FindCoplayerViewController.swift */,
+			);
+			path = FindCoplayer;
+			sourceTree = "<group>";
+		};
 		F4758603271D50AE0071C141 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +93,11 @@
 			children = (
 				F475860F271D50AE0071C141 /* AppDelegate.swift */,
 				F4758611271D50AE0071C141 /* SceneDelegate.swift */,
-				F4758613271D50AE0071C141 /* ViewController.swift */,
-				F4758615271D50AE0071C141 /* Main.storyboard */,
+				F4B62F0B271EC5A900681063 /* Arrows.swift */,
+				F45DD1FC271DB3BD0082DFB3 /* FindCoplayer */,
+				F45DD1F3271D577D0082DFB3 /* MainMenue */,
+				F45DD1F6271D619F0082DFB3 /* Startup */,
+				F45DD1F9271D62EF0082DFB3 /* CustomControls */,
 				F4758618271D50B20071C141 /* Assets.xcassets */,
 				F475861A271D50B20071C141 /* LaunchScreen.storyboard */,
 				F475861D271D50B20071C141 /* Info.plist */,
@@ -126,7 +164,6 @@
 			files = (
 				F475861C271D50B20071C141 /* LaunchScreen.storyboard in Resources */,
 				F4758619271D50B20071C141 /* Assets.xcassets in Resources */,
-				F4758617271D50AE0071C141 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4758614271D50AE0071C141 /* ViewController.swift in Sources */,
+				F45DD1F2271D576E0082DFB3 /* StartupViewController.swift in Sources */,
 				F4758610271D50AE0071C141 /* AppDelegate.swift in Sources */,
+				F45DD1FB271DB3B80082DFB3 /* FindCoplayerViewController.swift in Sources */,
+				F4B62F0C271EC5A900681063 /* Arrows.swift in Sources */,
+				F45DD1F5271D600F0082DFB3 /* MainMenueViewController.swift in Sources */,
 				F4758612271D50AE0071C141 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +186,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F4758615271D50AE0071C141 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4758616271D50AE0071C141 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F475861A271D50B20071C141 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6A83DQ5X88;
 				INFOPLIST_FILE = cascarda/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6A83DQ5X88;
 				INFOPLIST_FILE = cascarda/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
