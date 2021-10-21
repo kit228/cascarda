@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import CoreMotion
 
 class FindCoplayerViewController: UIViewController {
+    
+    var motionManager = CMMotionManager()
     
     private var connectionStatus: ConnectionPlayersStatus = .searchPlayers {
         willSet {
@@ -20,7 +23,7 @@ class FindCoplayerViewController: UIViewController {
     
     // MARK: - UI Elements
     
-    private let searchPlayersInfoView: UIView = {
+    private lazy var searchPlayersInfoView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.borderWidth = 2
@@ -29,7 +32,7 @@ class FindCoplayerViewController: UIViewController {
         return view
     }()
     
-    private var connectionStatusLabel: UILabel = {
+    private lazy var connectionStatusLabel: UILabel = {
         let label = UILabel()
         label.font = label.font.withSize(25)
         label.textAlignment = .center
@@ -37,7 +40,16 @@ class FindCoplayerViewController: UIViewController {
         return label
     }()
     
-    var loadingIndicator = UIActivityIndicatorView()
+    private lazy var loadingIndicator = UIActivityIndicatorView()
+    
+    private lazy var arrowLabel: UILabel = {
+        let label = UILabel()
+        label.font = label.font.withSize(150)
+        label.textColor = .black
+        label.text = Arrows.center.rawValue
+        label.textAlignment = .center
+        return label
+    }()
     
     // MARK: - lifeCycle
     
@@ -45,6 +57,7 @@ class FindCoplayerViewController: UIViewController {
         super.viewDidLoad()
         
         setupSubviews()
+        setupMotion()
     }
     
     init(with color: UIColor) {
@@ -58,13 +71,30 @@ class FindCoplayerViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Animations
+    // MARK: - Motion
+    
+    private func setupMotion() {
+        motionManager.gyroUpdateInterval = 0.2
+        var lastData: CMGyroData?
+        motionManager.startGyroUpdates(to: OperationQueue.current!) { data, error in
+            print(data?.rotationRate)
+            if lastData == nil {
+                lastData = data
+            } else {
+                if fabs(lastData?.rotationRate.x ?? 0) - fabs(data?.rotationRate.x ?? 0) > 0.8 {
+                    self.arrowLabel.text = Arrows.up.rawValue
+                }
+                lastData = data
+            }
+        }
+    }
     
     
     // MARK: - Layout
     
     private func setupSubviews() {
         view.addSubview(searchPlayersInfoView)
+        view.addSubview(arrowLabel)
         connectionStatusLabel.text = connectionStatus.rawValue
         loadingIndicator.startAnimating()
         searchPlayersInfoView.addSubview(connectionStatusLabel)
@@ -75,6 +105,13 @@ class FindCoplayerViewController: UIViewController {
     // MARK: - Constraints
     
     private func setupConstraints() {
+        arrowLabel.translatesAutoresizingMaskIntoConstraints = false
+        let arrowLabelAttributes: [NSLayoutConstraint.Attribute] = [.width, .height]
+        NSLayoutConstraint.activate(arrowLabelAttributes.map {
+            NSLayoutConstraint(item: arrowLabel, attribute: $0, relatedBy: .equal, toItem: nil, attribute: $0, multiplier: 1, constant: 200)
+        })
+        NSLayoutConstraint.activate([arrowLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor), arrowLabel.centerYAnchor.constraint(equalTo: searchPlayersInfoView.bottomAnchor, constant: 60)])
+        
         searchPlayersInfoView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([searchPlayersInfoView.centerXAnchor.constraint(equalTo: view.centerXAnchor), searchPlayersInfoView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 150)])
         searchPlayersInfoView.widthAnchor.constraint(equalToConstant: 250).isActive = true

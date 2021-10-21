@@ -12,6 +12,7 @@ enum Arrows: String, CaseIterable {
     case right = "\u{2192}"
     case down = "\u{2193}"
     case up = "\u{2191}"
+    case center = "\u{29BF}"
 }
 
 
