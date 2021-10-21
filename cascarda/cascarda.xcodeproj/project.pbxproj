@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F423E55327215D1E000A85A5 /* ConnectionPlayersStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F423E55227215D1E000A85A5 /* ConnectionPlayersStatus.swift */; };
 		F45DD1F5271D600F0082DFB3 /* MainMenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DD1F4271D600E0082DFB3 /* MainMenueViewController.swift */; };
 		F45DD1FB271DB3B80082DFB3 /* FindCoplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DD1FA271DB3B80082DFB3 /* FindCoplayerViewController.swift */; };
 		F4758610271D50AE0071C141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475860F271D50AE0071C141 /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F423E55227215D1E000A85A5 /* ConnectionPlayersStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionPlayersStatus.swift; sourceTree = "<group>"; };
 		F45DD1F4271D600E0082DFB3 /* MainMenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenueViewController.swift; sourceTree = "<group>"; };
 		F45DD1FA271DB3B80082DFB3 /* FindCoplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCoplayerViewController.swift; sourceTree = "<group>"; };
 		F475860C271D50AE0071C141 /* cascarda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cascarda.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F423E55427215D2C000A85A5 /* BluetoothConnection */ = {
+			isa = PBXGroup;
+			children = (
+				F423E55227215D1E000A85A5 /* ConnectionPlayersStatus.swift */,
+			);
+			path = BluetoothConnection;
+			sourceTree = "<group>";
+		};
 		F45DD1F3271D577D0082DFB3 /* MainMenue */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 				F475860F271D50AE0071C141 /* AppDelegate.swift */,
 				F4758611271D50AE0071C141 /* SceneDelegate.swift */,
 				F4B62F0B271EC5A900681063 /* Arrows.swift */,
+				F423E55427215D2C000A85A5 /* BluetoothConnection */,
 				F45DD1FC271DB3BD0082DFB3 /* FindCoplayer */,
 				F45DD1F3271D577D0082DFB3 /* MainMenue */,
 				F45DD1F9271D62EF0082DFB3 /* CustomControls */,
@@ -167,6 +178,7 @@
 				F45DD1FB271DB3B80082DFB3 /* FindCoplayerViewController.swift in Sources */,
 				F4B62F0C271EC5A900681063 /* Arrows.swift in Sources */,
 				F45DD1F5271D600F0082DFB3 /* MainMenueViewController.swift in Sources */,
+				F423E55327215D1E000A85A5 /* ConnectionPlayersStatus.swift in Sources */,
 				F4758612271D50AE0071C141 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
